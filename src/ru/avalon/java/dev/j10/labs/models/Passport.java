@@ -5,17 +5,23 @@ package ru.avalon.java.dev.j10.labs.models;
  * <p>
  * Паспортные данные должны включать:
  * <ol>
- *  <li> серию и номер документа;
- *  <li> имя;
- *  <li> фамилию;
- *  <li> отчество;
- *  <li> второе имя;
- *  <li> день рождения;
- *  <li> дату выдачи;
- *  <li> орган, выдавший документ.
+ * <li> серию и номер документа;
+ * <li> имя;
+ * <li> фамилию;
+ * <li> отчество;
+ * <li> второе имя;
+ * <li> день рождения;
+ * <li> дату выдачи;
+ * <li> орган, выдавший документ.
  * </ol>
  */
-class Passport {
+public class Passport {
+
+    public String mestoVudachi;
+    public String dataVudachi;
+    public int seriaPassporta;
+    public int nomerPassporta;
+    public String datarogdenia;
 
     /*
      * TODO(Студент): Закончить определение класса.
@@ -37,4 +43,31 @@ class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
+    public String toStringPassport() {
+        Person ivanov = new Person("Иван", "", "Иванович", "Иванов");
+        return ivanov.name + " " + ivanov.secondName + " " + ivanov.patronymic + " " + ivanov.surname + ", "
+                + "Дата рождения: " + datarogdenia
+                + ". Паспорт, серия: " + seriaPassporta + ", " + "номер " + nomerPassporta + ", " + "выдан: "
+                + mestoVudachi + ", " + "дата выдачи: " + dataVudachi;
+    }
+    
+        public String toStringPassportSmith() {
+        Person smith = new Person("John", "Edward", "", "Smith");
+        return smith.name + " " + smith.secondName + " " + smith.patronymic + " " + smith.surname + ", "
+                + "Дата рождения: " + datarogdenia
+                + ". Паспорт, серия: " + seriaPassporta + ", " + "номер " + nomerPassporta + ", " + "выдан: "
+                + mestoVudachi + ", " + "дата выдачи: " + dataVudachi;
+    }
+
+    public Passport(int seriaPassporta, int nomerPassporta, String mestoVudachi,
+            String dataVudachi, String datarogdenia) {
+        this.mestoVudachi = mestoVudachi;
+        this.seriaPassporta = seriaPassporta;
+        this.nomerPassporta = nomerPassporta;
+        this.dataVudachi = dataVudachi;
+        this.datarogdenia = datarogdenia;
+
+    }
+
+
 }

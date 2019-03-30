@@ -37,7 +37,7 @@ public class Main {
         
         String ivanovPassport;
         Passport ivanovP = new Passport(3021, 466109, "Полицейский участок №1", "05/01/1999", "11/10/1981");
-        ivanovPassport = ivanovP.toStringPassport();
+        ivanovPassport = ivanovP.toStringPassportIvanov();
         System.out.println(ivanovPassport);
         
         

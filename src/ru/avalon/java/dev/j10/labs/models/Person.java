@@ -14,10 +14,10 @@ package ru.avalon.java.dev.j10.labs.models;
  */
 public class Person  {
 
-    public String name;
-    public String secondName;
-    public String surname;
-    public String patronymic;
+    String name;
+    String secondName;
+    String surname;
+    String patronymic;
 
     public Person(String name, String secondName, String patronymic, String surname) {
         this.name = name;

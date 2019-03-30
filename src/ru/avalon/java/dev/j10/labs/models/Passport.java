@@ -17,11 +17,11 @@ package ru.avalon.java.dev.j10.labs.models;
  */
 public class Passport {
 
-    public String mestoVudachi;
-    public String dataVudachi;
-    public int seriaPassporta;
-    public int nomerPassporta;
-    public String datarogdenia;
+    private String mestoVudachi;
+    private String dataVudachi;
+    private int seriaPassporta;
+    private int nomerPassporta;
+    private String datarogdenia;
 
     /*
      * TODO(Студент): Закончить определение класса.
@@ -43,7 +43,7 @@ public class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
-    public String toStringPassport() {
+    public String toStringPassportIvanov() {
         Person ivanov = new Person("Иван", "", "Иванович", "Иванов");
         return ivanov.name + " " + ivanov.secondName + " " + ivanov.patronymic + " " + ivanov.surname + ", "
                 + "Дата рождения: " + datarogdenia

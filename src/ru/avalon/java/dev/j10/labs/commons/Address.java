@@ -17,18 +17,18 @@ package ru.avalon.java.dev.j10.labs.commons;
 
 public class Address {
 
-    public int zipcode;
-    public String region;
-    public String city;
-    public String street;
-    public int houseNumber;
-    public String houseLitera;
-    public int houseKorpus;
-    public int flatNumber;
-    public static final String COMA = ", ";
-    public static final String DOM = "дом ";
-    public static final String KORPUS = "корпус ";
-    public static final String FLAT = "квартира ";
+    private int zipcode;
+    private String region;
+    private String city;
+    private String street;
+    private int houseNumber;
+    private String houseLitera;
+    private int houseKorpus;
+    private int flatNumber;
+    private static final String COMA = ", ";
+    private static final String DOM = "дом ";
+    private static final String KORPUS = "корпус ";
+    private static final String FLAT = "квартира ";
 
     public String toStringAddress() {
         if (houseKorpus > 0 & flatNumber > 0 & (houseLitera.trim().length() == 0)) {
